@@ -71,6 +71,48 @@
       }
     },
     {
+      "rename": {
+        "field": "ClientMTLSAuthCertFingerprint",
+        "target_field": "cloudflare.client.mtls_auth_cert_fingerprint",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename":{
+        "field": "ClientMTLSAuthStatus",
+        "target_field": "cloudflare.client.mtls_auth_status",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename": {
+        "field": "ClientRequestScheme",
+        "target_field": "cloudflare.client.request.scheme",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename": {
+        "field": "ClientRequestSource",
+        "target_field": "cloudflare.client.request.source",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename": {
+        "field": "ClientTCPRTTMs",
+        "target_field": "cloudflare.client.tcp_rtt_ms",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename": {
+        "field": "ClientXRequestedWith",
+        "target_field": "cloudflare.client.x_requested_with",
+        "ignore_missing": true
+      }
+    },
+    {
       "set": {
         "field": "ecs.version",
         "value": "1.1.0"
@@ -230,8 +272,8 @@
       }
     },
     {
-      "user_agent" : {
-        "field" : "ClientRequestUserAgent",
+      "user_agent": {
+        "field": "ClientRequestUserAgent",
         "target_field": "user_agent",
         "ecs": true,
         "ignore_missing": true
@@ -244,7 +286,7 @@
       }
     },
     {
-      "remove" : {
+      "remove": {
         "field": "ClientRequestUserAgent",
         "ignore_missing": true
       }
@@ -381,6 +423,19 @@
     },
     {
       "rename": {
+        "field": "EdgeCFConnecting020",
+        "target_field": "cloudflare.edge.cf_connecting_o2o",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename": {
+        "field": "EdgeResponseBodyBytes",
+        "target_field": "cloudflare.edge.response.body_bytes"
+      }
+    },
+    {
+      "rename": {
         "field": "EdgeServerIP",
         "target_field": "cloudflare.edge.server.ip",
         "ignore_missing": true
@@ -396,6 +451,13 @@
       "rename": {
         "field": "EdgeStartTimestamp",
         "target_field": "cloudflare.edge.start.timestamp",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename": {
+        "field": "EdgeTimeToFirstByteMs",
+        "target_field": "cloudflare.edge.time_to_first_byte_ms",
         "ignore_missing": true
       }
     },
@@ -447,10 +509,10 @@
       }
     },
     {
-        "remove" : {
-            "if" : "ctx.OriginResponseHTTPExpires == ''",
-            "field" : "OriginResponseHTTPExpires"
-        }
+      "remove": {
+        "if": "ctx.OriginResponseHTTPExpires == ''",
+        "field": "OriginResponseHTTPExpires"
+      }
     },
     {
       "rename": {
@@ -460,10 +522,10 @@
       }
     },
     {
-        "remove" : {
-            "if" : "ctx.OriginResponseHTTPLastModified == ''",
-            "field" : "OriginResponseHTTPLastModified"
-        }
+      "remove": {
+        "if": "ctx.OriginResponseHTTPLastModified == ''",
+        "field": "OriginResponseHTTPLastModified"
+      }
     },
     {
       "rename": {
@@ -495,6 +557,47 @@
     },
     {
       "rename": {
+        "field": "OriginDNSResponseTimeMs",
+        "target_field": "cloudflare.origin.dns_response_time_ms"
+      }
+    },
+    {
+      "rename": {
+        "field": "OriginRequestHeaderSendDurationMs",
+        "target_field": "cloudflare.origin.request_header_send_duration_ms",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename": {
+        "field": "OriginResponseDurationMs",
+        "target_field": "cloudflare.origin.response_duration_ms",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename": {
+        "field": "OriginResponseHeaderReceiveDurationMs",
+        "target_field": "cloudflare.origin.response_header_receive_duration_ms",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename": {
+        "field": "OriginTCPHandshakeDurationMS",
+        "target_field": "cloudflare.origin.tcp_handshake_duration_ms",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename": {
+        "field": "OriginTLSHandshakeDurationMs",
+        "target_field": "cloudflare.origin.tls_handshake_duration_ms",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename": {
         "field": "ParentRayID",
         "target_field": "cloudflare.parent.ray_id",
         "ignore_missing": true
@@ -511,6 +614,20 @@
       "rename": {
         "field": "SecurityLevel",
         "target_field": "cloudflare.security_level",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename": {
+        "field": "SmartRouteColoID",
+        "target_field": "cloudflare.smart_route_colo_id",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename": {
+        "field": "UpperTierColoID",
+        "target_field": "cloudflare.upper_tier_colo_id",
         "ignore_missing": true
       }
     },
@@ -588,6 +705,13 @@
       "rename": {
         "field": "ZoneID",
         "target_field": "cloudflare.zone_id",
+        "ignore_missing": true
+      }
+    },
+    {
+      "rename": {
+        "field": "ZoneName",
+        "target_field": "cloudflare.zone_name",
         "ignore_missing": true
       }
     }

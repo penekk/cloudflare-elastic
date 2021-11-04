@@ -328,8 +328,59 @@
          "cloudflare.client.ssl.cipher": {
             "type": "keyword"
          },
+         "cloudflare.client.mtls_auth_cert_fingerprint": {
+            "type": "keyword"
+         },
+         "cloudflare.client.mtls_auth_status": {
+            "type": "keyword"
+         },
+         "cloudflare.client.request.scheme": {
+            "type": "keyword"
+         },
+         "cloudflare.client.request.source": {
+            "type": "keyword"
+         },
+         "cloudflare.client.tcp_rtt_ms": {
+            "type": "long"
+         },
+         "cloudflare.client.x_requested_with": {
+            "type": "keyword"
+         },
          "cloudflare.edge.response.bytes": {
             "type": "long"
+         },
+         "cloudflare.edge.cf_connecting_o2o": {
+            "type": "boolean"
+         },
+         "cloudflare.edge.response_body_bytes": {
+            "type": "long"
+         },
+         "cloudflare.edge.time_to_first_byte_ms": {
+            "type": "long"
+         },
+         "cloudflare.origin.dns_response_time_ms": {
+            "type": "long"
+         },
+         "cloudflare.origin.request_header_send_duration_ms": {
+            "type": "long"
+         },
+         "cloudflare.origin.response_duration_ms": {
+            "type": "long"
+         },
+         "cloudflare.origin.response_header_receive_duration_ms": {
+            "type": "long"
+         },
+         "cloudflare.origin.tcp_handshake_duration_ms": {
+            "type": "long"
+         },
+         "cloudflare.origin.tls_handshake_duration_ms": {
+            "type": "long"
+         },
+         "cloudflare.smart_route_colo_id": {
+            "type": "keyword"
+         },
+         "cloudflare.upper_tier_colo_id": {
+            "type": "keyword"
          },
          "url.path": {
             "type": "keyword"
